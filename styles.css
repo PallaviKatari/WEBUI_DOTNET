@@ -1,0 +1,31 @@
+pre{
+    color:blue;
+    font-size: x-large;
+    text-align: center;
+}
+
+#demo{
+    color:blueviolet;
+    background-color: antiquewhite;
+}
+
+.demo1{
+    color:chocolate;
+    background-color: azure;
+}
+
+h2{
+    color:cornflowerblue;
+}
+
+h4,h5{
+    color:crimson;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: blanchedalmond;
+    text-align: right;
+}
+
+*{
+    color:darkblue;
+    background-color: cornsilk;
+}

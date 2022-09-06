@@ -1,0 +1,173 @@
+<!--shift+1 and enter-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to HTML</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        p{
+            color:blueviolet;
+            font-size: large;
+            font-family: cursive;
+            background-color: blanchedalmond;
+        }
+        ul>li{
+            color:red;
+        }
+        ol>li{
+            color:blue;
+        }
+        dl>dt{
+            color:rgb(255, 0, 247)
+        }
+        dl>dd{
+            color:blue;
+        }
+        table{
+            width:100%;
+        }
+        th{
+            height:35px;
+            color:brown;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        tr:nth-child(even){
+            background-color: bisque;
+        }
+        tr:hover{
+            background-color: paleturquoise;
+            color:blue;
+        }
+        a:hover{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <abbr title="Cascading Style Sheet">&lt;CSS&gt;</abbr>
+    <br>
+    <a href="sample.html" target="_blank">&#128512;Sample&#128512;
+    </a>
+    <!--heading tag-->
+    <h1 style="color:blue;background-color: aqua;">WELCOME TO HTML</h1>
+    <h1 style="color:aqua;background-color:blue;">Hi</h1>
+    <h6>HYPERTEXT MARKUP LANGUAGE</h6>
+    <!--paragraph tag-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure alias vel nihil necessitatibus eligendi tempora molestiae. Unde saepe odit blanditiis in corrupti cumque eligendi natus delectus, non voluptatibus officia a.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi veritatis quia cupiditate. Error mollitia dolor quasi nesciunt saepe sit, blanditiis assumenda aliquam tempore numquam molestiae voluptatum nostrum tenetur totam repudiandae?</p>
+    <hr>
+    <!--pre tag with formatting elements-->
+    <pre>
+        <b>Lorem, ipsum dolor sit amet </b><br>
+        <i>consectetur adipisicing elit.</i> <br>
+        <emp>culpa aut itaque enim quam architecto</emp><br>
+        <mark>numquam! Suscipit iure quod corporis,</mark> <br>
+        hic repellat error corrupti voluptatibus a <br>
+        alias ullam, cumque voluptatum. <br>
+        2 <sup>2</sup> 2 <sub>2</sub>
+        <del>I am deleted</del>
+        <ins>Hello</ins>
+    </pre>
+    <hr>
+    <!--anchor tag-->
+    <a href="https://www.google.com/" target="_blank">Google</a><br>   
+    <hr>
+    <!--image tag-->
+    <img src="assets/IMG1.jpg" height="100px" width="200px" alt="HTML">
+    <hr>
+    <!--Lists-->
+    <!--Ordered,unordered,definition-->
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ol>
+    <ol type="a">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ol>
+    <ol type="A">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ol>
+    <ol type="I">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ol>
+    <ol type="i">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ol>
+    <hr>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <ul type="circle">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <ul type="square">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <ul type="disc">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+    <hr>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HYPERTEXT MARKUP LANGUAGE</dd>
+        <dt>CSS</dt>
+        <dd>CASCADING STYLE SHEET</dd>
+    </dl>
+    <hr>
+    <audio controls autoplay muted>
+        <source src="assets/SampleAudio.mp3" type="audio/mp3">
+    </audio>
+    <hr>
+    <video width="400px" controls poster="assets/workplace.jpg">
+        <source src="assets/SampleVideo.mp4" type="video/mp4">
+    </video>
+    <hr>
+    <iframe src="https://www.dlithe.com/" height="400px" width="400px"></iframe>
+    <hr>
+    <a href="https://www.google.com/webhp?igu=1" target="google" title="Google">Google</a>
+    <hr>
+    <iframe src="https://www.dlithe.com/" name="google" height="400px" width="700px"></iframe>
+    <hr>
+    <!--TABLES-->
+    <table border="1">
+        <caption>DOTNET TRAINING</caption>
+        <thead>
+            <tr><th>Training Code</th><th>Training Name</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>T001</td><td>Software Engineering</td></tr>
+            <tr><td>T002</td><td>OOPS</td></tr>
+            <tr><td>T003</td><td>Database</td></tr>
+            <tr><td>T004</td><td>WEB UI</td></tr>
+            <tr><td>T005</td><td>Angular</td></tr>
+            <tr><td>T006</td><td>.NET</td></tr>
+            <tr><td>T007</td><td>MS SQL Server</td></tr>
+        </tbody>
+    </table>
+    <hr>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem eaque minus minima esse voluptas est sapiente numquam. Quas qui quo animi, provident obcaecati nostrum voluptatum nemo aperiam cupiditate dolores possimus.</p>
+    <address>
+        ABC Company<br>
+        Bangalore
+    </address>
+    <bdo dir="rtl">Arabic</bdo>
+    <p>&copy;www.abc.com</p>
+    <p>Hello</p>
+    <span style="background-color:aqua;">&copy;www.abc.com</span>
+    <span>Hi</span>
+    <span>Hello</span>
+    <pre>Hi</pre>
+</body>
+</html>
+
