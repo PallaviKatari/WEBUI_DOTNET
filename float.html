@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .parent{
+            width:100%;
+            float:center;
+        }
+        .header{
+            text-align: center;
+            background-color: burlywood;
+            border:2px solid brown;
+            color:white;
+            padding: 10px;
+        }
+        .left{
+            width: 20%;
+            height:600px;
+            background-color: cornflowerblue;
+            border:2px solid rgb(96, 6, 89);
+            float:left;
+        }
+        .center{
+            width: 60%;
+            height:600px;
+            background-color: rgb(229, 181, 243);
+            border:2px solid darkblue;
+            float:left;
+        }
+        .right{
+            width: 20%;
+            height:600px;
+            background-color: rgb(166, 236, 161);
+            border:2px solid rgb(4, 63, 25);
+            float:left;
+        }
+        .footer{
+            text-align: center;
+            background-color: burlywood;
+            border:2px solid brown;
+            color:rgb(3, 3, 3);
+            padding: 20px;
+        }
+        .vertical{
+            list-style-type: none;
+            margin:0;
+            margin-top: 20px;
+            padding:10px;
+            width:200px;
+            position:sticky;
+            overflow:auto;
+            height:100%;
+        }
+        li a.verticalnav{
+            display:block;
+            color:darkblue;
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: larger;
+        }
+        li a.verticalnav:hover{
+            background-color: aquamarine;
+        }
+        
+        #active{
+            background-color: blueviolet;
+        }
+
+        p::first-letter{
+            color:red;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        p::first-line{
+            color:blue;
+        }
+        p::selection{
+            color:blue;
+            background-color: aquamarine;
+        }
+        ::marker{
+            color:chartreuse;
+        }
+        body{
+            background-image: url("assets/IMG1.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .transition{
+            width:100px;
+            height:100px;
+            transition: width 2s,height 2s, transform 1s;
+        }
+        .transition:hover{
+            width:300px;
+            height:200px;
+            transform:rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="header">
+            <h2>ONLINE TRAINING</h2>
+        </div>
+        <div>
+            <!--Vertical Navigation-->
+            <div class="left">
+                <ul class="vertical">
+                    <li><a id="active" class="verticalnav" href="index.html" target="_blank">HTML Basic Tags</a></li>
+                    <li><a class="verticalnav" href="forms.html" target="_blank">HTML Form Tags</a></li>
+                    <li><a class="verticalnav">CSS Types</a></li>
+                    <li><a class="verticalnav" href="selectors.html" target="_blank">CSS Selectors</a></li>
+                    <li><a class="verticalnav">CSS Border Properties</a></li>
+                    <li><a class="verticalnav">CSS Float</a></li>
+                    <li><a class="verticalnav">CSS Animation</a></li>
+                    <li><a class="verticalnav">CSS Text Properties</a></li>
+                    <li><a class="verticalnav">CSS Navigation</a></li>
+                    <li><a class="verticalnav">CSS Transition</a></li>
+                    <li><a class="verticalnav">CSS Media Queries</a></li>
+                </ul>
+            </div>
+            <!--float property with a image-->
+            <div class="center">
+                <p><img src="assets/IMG1.jpg" alt="HTML" height="100px" width="100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!</p><hr>
+                <p><img src="assets/IMG1.jpg" alt="HTML" height="100px" width="100px" style="float:left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!</p><hr>
+                <p><img src="assets/IMG1.jpg" alt="HTML" height="100px" width="100px" style="float:right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!</p><br>
+            </div>
+            <div class="right">
+                <iframe width="250" height="245" style="margin-left:20px;margin-top:20px;" src="https://www.youtube.com/embed/zZ0Z5wSka6c">
+                </iframe>
+                <iframe width="250" height="245" style="margin-left:20px;margin-top:20px;" src="https://www.youtube.com/embed/zZ0Z5wSka6c">
+                </iframe>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>&copy; www.onlinetraining.com</h2>
+            <h3>Contact</h3>
+            <ul style="text-align:left">
+                <li>9837357598</li>
+                <li>6359379437</li>
+            </ul><br>
+            <img class="transition" src="assets/img2.jpg" height="100px" width="100px" alt="CSS" >            
+        </div>
+    </div>    
+</body>
+</html>
