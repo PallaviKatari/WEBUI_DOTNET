@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in CSS</title>
+    <style>
+        div.color{
+            background-color: red;
+            height:100px;
+            width:100px;
+            border-radius: 60px;
+            position:relative;
+            animation-name: car_animation; 
+            animation-duration: 5s;  
+            animation-timing-function: linear;     
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; 
+            text-align: center; 
+
+        }
+        div.image{
+            background-color: red;
+            height:100px;
+            width:100px;
+            border-radius: 60px;
+            position:relative;
+            animation-name: div_animation; 
+            animation-duration: 5s;  
+            animation-timing-function: linear;     
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;  
+            color: blue; 
+            text-align: center;
+            padding: 20px;
+
+        }
+        
+        @keyframes car_animation{
+            0% {background-image: url("assets/IMG1.jpg");left:0px;top:0px;}
+            20% {background-image: url("assets/img3.jpg");left:30px;}
+            50% {background-image: url("https://th.bing.com/th/id/OIP.2QtmJ5nDhQl2L1d6OZNshgHaEK?w=265&h=180&c=7&r=0&o=5&dpr=1.88&pid=1.7");left:50px;top:50px;}
+            100%{background-image: url("https://th.bing.com/th/id/OIP.5UJOoCMBQ77zqg7-GZ0-IQHaEo?w=268&h=180&c=7&r=0&o=5&dpr=1.88&pid=1.7");left:50px;top:50px;}
+        }
+        @keyframes div_animation{
+            0% {background-color: blue;left:0px;top:0px;color:rgb(237, 100, 205);}
+            20% {background-color: rgb(0, 255, 4);left:130px;top:130px;color:rgb(125, 237, 100);}
+            50% {background-color: rgb(255, 0, 195);left:150px;top:150px;color:rgb(237, 146, 100);}
+            100%{background-color: rgb(255, 230, 0);left:50px;top:50px;color:rgb(100, 219, 237);}
+        }
+
+    </style>
+</head>
+<body>    
+    <br>
+    <div class="color"><img style="margin-top: 20px;border-radius:10px;" src="assets/img2.jpg" height="50px" width="50px"></div>
+    <div class="image">Hello</div>
+</body>
+</html>

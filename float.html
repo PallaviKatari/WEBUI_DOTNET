@@ -104,6 +104,85 @@
             height:200px;
             transform:rotate(360deg);
         }
+        /*Media Queries*/
+        @media screen and (max-width:1000px)
+        {
+            iframe{
+                height:80px;
+                width:80px;
+            }
+            li a.verticalnav{
+            display:block;
+            color:rgb(139, 0, 139);
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        p{
+            font-size: 12px;
+        }
+        img{
+            display: none;
+        }
+        .ul_media{
+            display:none;
+        }
+        }
+        @media screen and (max-width:800px)
+        {
+            iframe{
+                height:100px;
+                width:100px;
+            }
+            li a.verticalnav{
+            display:block;
+            color:rgb(0, 139, 7);
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: 10px;
+        }
+        p{
+            font-size: 10px;
+        }
+        .media{
+            display:none;
+        }
+        img{
+            display: none;
+        }
+        .ul_media{
+            display:none;
+        }
+        }
+        @media screen and (max-width:600px)
+        {
+            iframe{
+                height:50px;
+                width:50px;
+            }
+            li a.verticalnav{
+            display:block;
+            color:rgb(139, 0, 0);
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: 8px;
+        }
+        p{
+            font-size: 8px;
+        }
+        .media{
+            display:none;
+        }
+        img{
+            display: none;
+        }
+        .ul_media{
+            display:none;
+        }
+        }
     </style>
 </head>
 <body>
@@ -115,7 +194,7 @@
             <!--Vertical Navigation-->
             <div class="left">
                 <ul class="vertical">
-                    <li><a id="active" class="verticalnav" href="index.html" target="_blank">HTML Basic Tags</a></li>
+                    <li><a class="verticalnav" href="index.html" target="_blank">HTML Basic Tags</a></li>
                     <li><a class="verticalnav" href="forms.html" target="_blank">HTML Form Tags</a></li>
                     <li><a class="verticalnav">CSS Types</a></li>
                     <li><a class="verticalnav" href="selectors.html" target="_blank">CSS Selectors</a></li>
@@ -130,21 +209,21 @@
             </div>
             <!--float property with a image-->
             <div class="center">
-                <p><img src="assets/IMG1.jpg" alt="HTML" height="100px" width="100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!</p><hr>
-                <p><img src="assets/IMG1.jpg" alt="HTML" height="100px" width="100px" style="float:left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!</p><hr>
-                <p><img src="assets/IMG1.jpg" alt="HTML" height="100px" width="100px" style="float:right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!</p><br>
+                <p><img class="media" src="assets/IMG1.jpg" alt="HTML" height="100px" width="100px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!</p><hr>
+                <p><img class="media" src="assets/IMG1.jpg" alt="HTML" height="100px" width="100px" style="float:left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!</p><hr>
+                <p><img class="media" src="assets/IMG1.jpg" alt="HTML" height="100px" width="100px" style="float:right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eaque facilis temporibus nobis fuga libero architecto quasi eum, hic aliquam sapiente impedit at, magni laborum doloribus eveniet eius debitis maiores!</p><br>
             </div>
             <div class="right">
-                <iframe width="250" height="245" style="margin-left:20px;margin-top:20px;" src="https://www.youtube.com/embed/zZ0Z5wSka6c">
+                <iframe width="150" height="245" style="margin-left:20px;margin-top:20px;" src="https://www.youtube.com/embed/zZ0Z5wSka6c">
                 </iframe>
-                <iframe width="250" height="245" style="margin-left:20px;margin-top:20px;" src="https://www.youtube.com/embed/zZ0Z5wSka6c">
+                <iframe width="150" height="245" style="margin-left:20px;margin-top:20px;" src="https://www.youtube.com/embed/zZ0Z5wSka6c">
                 </iframe>
             </div>
         </div>
         <div class="footer">
             <h2>&copy; www.onlinetraining.com</h2>
-            <h3>Contact</h3>
-            <ul style="text-align:left">
+            <h3 class="ul_media">Contact</h3>
+            <ul style="text-align:left" class="ul_media">
                 <li>9837357598</li>
                 <li>6359379437</li>
             </ul><br>
