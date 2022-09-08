@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basics</title>
+    <!--JS in head tag-->
+    <script type="text/javascript">
+        function msg() {
+            alert("Welcome to JS in the Head Tag");
+        }
+    </script>
+    <!--External JS-->
+    <script type="text/javascript" src="external.js"></script>
+</head>
+
+<body>
+    <!--JS in body tag-->
+    <script type="text/javascript">
+        function msg1() {
+            alert("Welcome to JS in the Body Tag");
+        }
+    </script>
+    <!--auto alert
+    <script type="text/javascript">
+        alert("I am an Auto alert");
+    </script>-->
+    <!--accessing the js functions-->
+    <input type="button" value="Click Head tag" onclick="msg()" />
+    <input type="button" value="Click Body Tag" onclick="msg1()" />
+    <input type="button" value="Click External JS" onclick="msg2()" />
+    <!--Display the output in JS in 4 ways-->
+    <!--innerHTML-->
+    <p id="info"></p>
+    <script>
+        document.getElementById("info").innerHTML = "I am a message through innerHTML";
+    </script>
+    <!--document.write-->
+    <script>
+        document.write("I am message through document.write");
+    </script>
+    <!--window.alert
+    <script>
+        window.alert("I am a message through window.alert");
+    </script>-->
+    <!--console.log-->
+    <script>
+        console.log("I am message through console.log");
+    </script>
+    <br>
+    <br>
+    <!--Datatypes-->
+    <script>
+        var empid = 100;
+        var empname = "John";
+        var empmobile = [762548, 8736547];
+        var empstatus = true;
+        document.write(empname + "s" + " id is " + empid + "<br>");
+        document.write("Primary number " + empmobile[0] + "<br>");
+        document.write("Secondary number " + empmobile[1] + "<br>");
+    </script>
+    <!--Object-->
+    <p id="address"></p>
+    <script>
+        const address = {
+            street_number: 123,
+            city: "Bangalore",
+            pincode: 546324
+        }
+        document.getElementById("address").innerHTML=address.street_number + "<br>" + address.city + "<br>" + address.pincode;
+    </script>    
+    <!--Events-->
+    <button onclick="this.innerHTML=Date()">Today's date is?</button>
+    <br>
+    <br>
+    <select onchange="alert('Selection changed')">
+        <option>Dotnet</option>
+        <option>Java</option>
+        <option>Python</option>
+    </select>
+    <br>
+    <br>
+    <input type="text" onkeypress="alert('Text Entered')">
+    <br>
+    <br>
+    <p id="hover" onmouseover="hover_func()" onmouseleave="leave_func()" style="background-color:aqua;height: 50px;width:100px;">Hello</p>
+    <script>
+        function hover_func()
+        {
+            var a=document.getElementById('hover');
+            a.style.width='200px';
+            a.style.height='30px';
+            a.style.backgroundColor='red';
+            a.style.color='white';
+        }
+        function leave_func()
+        {
+            var a=document.getElementById('hover');
+            a.style.width='100px';
+            a.style.height='50px';
+            a.style.backgroundColor='pink';
+            a.style.color='violet';
+        }
+    </script>
+    <!--Functions-->
+    <input type="button" onclick="login('John',1234)" value="Login">
+    <br>
+    <br>
+    <input type="button" onclick="bonus(30000)" value="Bonus">
+    <script>
+        function login(username,password)
+        {
+            alert("Welcome " + username ) ;
+        }
+        function bonus(salary)
+        {
+            alert("Festival Bonus for you " + (salary+salary));
+        }
+    </script>
+</body>
+
+</html>

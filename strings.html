@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Strings</title>
+</head>
+<body>
+    <script>
+        var course="Javascript";
+        var course1="HTML";
+        //concat
+        var course2=course1.concat(course);
+        document.write(course2);  
+        //indexOf and lastIndexOf
+        var message="Welcome to JS... Welcome back";
+        var value=message.indexOf("Welcome");
+        document.write("<br>"+value);   
+        var value1=message.lastIndexOf("come");
+        document.write("<br>"+value1); 
+        //toUpperCase and toLowerCase
+        document.write("<br>");
+        document.write(course1.toLowerCase());
+        document.write("<br>");
+        document.write(course.toUpperCase());
+    </script>    
+</body>
+</html>

@@ -1,0 +1,17 @@
+Javascript
+-----------
+->Programming language
+->interaction with the elements in the webpage
+->client-side scripting - web browser (html,css,js) - interpreter - line by line
+->Dynamic webpage ->events,animations,validations,DOM(DOCUMENT OBJECT MODEL) manipulation
+->JS -> 3 Concepts -> ECMAScript ->Core functionality ->ES6, DOM(interaction), BOM(API->Application Program interface)
+->JSON ->JSON ->Javascript object notation ->key/value pair -> data transfer
+->case-sensitive
+->.js 
+-> <script>
+->Display Output ->innerHTML,document.write,window.alert(),console.log
+->Datatypes -> number,string,boolean,array,undefined,null
+->Variables ->var a = 10,var name="John",var score = true, var b,var abc=null,var courses=[".NET","java"]
+->Control Statements -> Conditional and Looping
+->Conditional/Decision making -> if,if-else,else if,nested if,switch-case
+->Looping -> for,while,do while

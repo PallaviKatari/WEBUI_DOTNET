@@ -1,7 +1,0 @@
-Selectors
------------
-id - high priority
-class - next level
-element - next
-grouping - next
-universal - lowest

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Statements in JS</title>
+</head>
+<body>
+    <!--Decision making with relational and logical operators-->
+    <script>
+        var a=100,b=200,c=30;
+        if((a>b)&&(a>c))
+        {
+            alert("A is the greatest");
+        }
+        else if(b>c)
+        {
+            alert("B is the greatest");
+        }
+        else
+        {
+            alert("C is the greatest");
+        }
+    </script>
+    <!--Switch-case-->
+    <script>
+    var course="VB";
+    switch(course)
+    {
+        case "VB":
+        alert("VB");
+        break;
+        case "JS":
+        alert("JS");
+        break;
+        default:
+        alert("Course not found");
+        break;
+    }
+</script>
+<!--Looping-->
+<!--Entry(for,while) and Exit(do-while)-->
+<script>
+    document.write("FOR LOOP"+"<br>");
+    for(var i=0;i<5;i++)
+    {
+        document.write(i+"<br>");
+    }
+    document.write("WHILE LOOP"+"<br>");
+    var j=10;
+    while(j<15)
+    {
+        document.write(j+"<br>");
+        j++;
+    }
+    document.write("DO WHILE LOOP"+"<br>");
+    var k=20;
+    do
+    {
+        document.write(k+"<br>");
+        k++;
+    }while(k<25);
+</script>
+
+    
+</body>
+</html>
