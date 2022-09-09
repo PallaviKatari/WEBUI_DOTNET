@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism:Compile-time</title>
+</head>
+<body>
+    <script>
+        function add()
+        {
+            //Decision making (if-else)
+            if(arguments.length==0) //default function(no parameters)
+            {
+                var x=10;
+                console.log(x+x); //20
+            }
+            else if(arguments.length==1)
+            {
+                console.log("Overloaded with 1 parameter: " + arguments[0]);
+            }
+            else{
+                var sum=0;
+                var tot_arg=arguments.length; //3
+                for(var i=0;i<tot_arg;i++)
+                {
+                    sum+=arguments[i];//0+10+20=30+30=60
+                }
+                console.log(sum);
+            }
+        }
+        add(); //default function
+        add(10); //function with 1 parameter
+        add(30,30)
+    </script>
+
+    
+</body>
+</html>

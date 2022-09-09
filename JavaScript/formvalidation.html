@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function registration() {
+
+            var name = document.getElementById("t1").value;
+            var email = document.getElementById("t2").value;
+            var uname = document.getElementById("t3").value;
+            var pwd = document.getElementById("t4").value;
+            var cpwd = document.getElementById("t5").value;
+
+            //email id expression code
+            var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+            var letters = /^[A-Za-z]+$/;
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if (name == '') {
+                document.getElementById("name").innerHTML = "Enter your name";
+                var error = document.getElementById("t1");
+                error.style.borderStyle = 'solid';
+                error.style.borderColor = 'red';
+                //alert('Please enter your name');
+            }
+            else if (!letters.test(name)) {
+                document.getElementById("name").innerHTML = "Name field required only alphabet characters";
+                //alert('Name field required only alphabet characters');
+            }
+            else if (email == '') {
+                document.getElementById("email").innerHTML = "Enter your email id";
+                var error = document.getElementById("t2");
+                error.style.borderStyle = 'solid';
+                error.style.borderColor = 'red';
+                //alert('Please enter your user email id');
+            }
+            else if (!filter.test(email)) {
+                document.getElementById("email").innerHTML = "Invalid email id";
+                //alert('Invalid email');
+            }
+            else if (uname == '') {
+                document.getElementById("un").innerHTML = "Enter your username";
+                var error = document.getElementById("t3");
+                error.style.borderStyle = 'solid';
+                error.style.borderColor = 'red';
+                //alert('Please enter the user name.');
+            }
+            else if (!letters.test(uname)) {
+                document.getElementById("un").innerHTML = "Username field required only alphabet characters";
+                //alert('User name field required only alphabet characters');
+            }
+            else if (pwd == '') {
+                document.getElementById("pass").innerHTML = "Enter Password";
+                var error = document.getElementById("t4");
+                error.style.borderStyle = 'solid';
+                error.style.borderColor = 'red';
+                //alert('Please enter Password');
+            }
+            else if (cpwd == '') {
+                document.getElementById("cpass").innerHTML = "Re-Enter Password";
+                var error = document.getElementById("t5");
+                error.style.borderStyle = 'solid';
+                error.style.borderColor = 'red';
+                //alert('Enter Confirm Password');
+            }
+            else if (!pwd_expression.test(pwd)) {
+                document.getElementById("pass").innerHTML = "Upper case, Lower case, Special character and Numeric letter are required in Password filed";
+                // alert('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+            }
+            else if (pwd != cpwd) {
+                document.getElementById("cpass").innerHTML = "Password do not Match";
+                //alert('Password not Matched');
+            }
+            else if (document.getElementById("t5").value.length < 6) {
+                alert('Password minimum length is 6');
+            }
+            else if (document.getElementById("t5").value.length > 12) {
+                alert('Password max length is 12');
+            }
+            else {
+                var error = document.getElementById("t1");
+                error.style.borderStyle = 'solid';
+                error.style.borderColor = 'green';
+                var error1 = document.getElementById("t2");
+                error1.style.borderStyle = 'solid';
+                error1.style.borderColor = 'green';
+                var error2 = document.getElementById("t3");
+                error2.style.borderStyle = 'solid';
+                error2.style.borderColor = 'green';
+                var error3 = document.getElementById("t4");
+                error3.style.borderStyle = 'solid';
+                error3.style.borderColor = 'green';
+                var error4 = document.getElementById("t5");
+                error4.style.borderStyle = 'solid';
+                error4.style.borderColor = 'green';
+                document.getElementById("name").innerHTML = "";
+                document.getElementById("email").innerHTML = "";
+                document.getElementById("un").innerHTML = "";
+                document.getElementById("pass").innerHTML = "";
+                document.getElementById("cpass").innerHTML = "";
+                document.getElementById("register").innerHTML = "Registration Successful";
+                // Redirecting to other page or website code. 
+                //window.location = "https://www.google.com";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Main div code -->
+    <div id="main">
+        <div class="h-tag">
+            <h2>Register Your Account</h2>
+        </div>
+        <!-- create account div -->
+        <div class="login">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+                <tr>
+                    <td align="right">Enter Name :</td>
+                    <td><input type="text" placeholder="Enter user here" id="t1" required /><span id="name"></span></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Email ID :</td>
+                    <td><input type="text" placeholder="Enter Email ID here" id="t2" /><span id="email"></span></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Username :</td>
+                    <td><input type="text" placeholder="Enter Username here" id="t3" /><span id="un"></span></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Password :</td>
+                    <td><input type="password" placeholder="Enter Password here" id="t4" /><span id="pass"></span></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Confirm Password :</td>
+                    <td><input type="password" placeholder="Enter Password here" id="t5" /><span id="cpass"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Create Account" onclick="registration()" />
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <p style="text-align:center" id="register"></p>
+        </div>
+        <!-- create account box ending here.. -->
+    </div>
+    <!-- Main div ending here... -->
+
+</body>
+
+</html>

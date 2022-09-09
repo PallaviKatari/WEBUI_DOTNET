@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,8 +68,8 @@
             city: "Bangalore",
             pincode: 546324
         }
-        document.getElementById("address").innerHTML=address.street_number + "<br>" + address.city + "<br>" + address.pincode;
-    </script>    
+        document.getElementById("address").innerHTML = address.street_number + "<br>" + address.city + "<br>" + address.pincode;
+    </script>
     <!--Events-->
     <button onclick="this.innerHTML=Date()">Today's date is?</button>
     <br>
@@ -82,26 +81,41 @@
     </select>
     <br>
     <br>
+    <input id="focus" type="text" onblur="blur_effect()" onfocus="highlightInput()">
+    <br>
+    <script>
+        function highlightInput() {
+            var e = document.getElementById('focus');
+            e.style.backgroundColor = 'blue';
+            e.style.color = 'red';
+        }
+        function blur_effect() {
+            var e = document.getElementById('focus');
+            e.style.backgroundColor = 'grey';
+            e.style.color = 'white';
+
+        }
+    </script>
+    <br>
     <input type="text" onkeypress="alert('Text Entered')">
     <br>
     <br>
-    <p id="hover" onmouseover="hover_func()" onmouseleave="leave_func()" style="background-color:aqua;height: 50px;width:100px;">Hello</p>
+    <p id="hover" onmouseover="hover_func()" onmouseleave="leave_func()"
+        style="background-color:aqua;height: 50px;width:100px;">Hello</p>
     <script>
-        function hover_func()
-        {
-            var a=document.getElementById('hover');
-            a.style.width='200px';
-            a.style.height='30px';
-            a.style.backgroundColor='red';
-            a.style.color='white';
+        function hover_func() {
+            var a = document.getElementById('hover');
+            a.style.width = '200px';
+            a.style.height = '30px';
+            a.style.backgroundColor = 'red';
+            a.style.color = 'white';
         }
-        function leave_func()
-        {
-            var a=document.getElementById('hover');
-            a.style.width='100px';
-            a.style.height='50px';
-            a.style.backgroundColor='pink';
-            a.style.color='violet';
+        function leave_func() {
+            var a = document.getElementById('hover');
+            a.style.width = '100px';
+            a.style.height = '50px';
+            a.style.backgroundColor = 'pink';
+            a.style.color = 'violet';
         }
     </script>
     <!--Functions-->
@@ -110,15 +124,12 @@
     <br>
     <input type="button" onclick="bonus(30000)" value="Bonus">
     <script>
-        function login(username,password)
-        {
-            alert("Welcome " + username ) ;
+        function login(username, password) {
+            alert("Welcome " + username);
         }
-        function bonus(salary)
-        {
-            alert("Festival Bonus for you " + (salary+salary));
+        function bonus(salary) {
+            alert("Festival Bonus for you " + (salary + salary));
         }
     </script>
 </body>
-
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstraction</title>
+</head>
+<body>
+    <script>
+        class Course{
+            constructor()
+            {
+                if(this.constructor==Course)
+                {
+                    throw new Error("Abstract class cannot be instantiated");
+
+                }
+            }
+            course_details()
+            {
+                throw new Error("Abstract function cannot be invoked");
+
+            }
+        }
+        class js extends Course
+        {
+            course_details()
+            {
+                console.log("JS");
+            }
+
+        }
+        var j=new js();
+        j.course_details();
+    </script>
+    
+</body>
+</html>

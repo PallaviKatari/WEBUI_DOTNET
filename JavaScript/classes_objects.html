@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Classes and Objects</title>
+</head>
+<body>
+    <script>
+        //Class
+        class Trainee
+        {
+            //parameterized constructor
+            constructor(tid,tname) //10,John
+            {
+                this.id=tid; //10
+                this.name=tname; //John
+            }
+            //Function
+            trainee_details()
+            {
+                return this.id + " " + this.name;
+            }            
+        }
+        //instance for the class Trainee
+        var t1=new Trainee(10,"John");//parameterized constructor
+        console.log(t1.id); //10
+        console.log(t1.name); //John
+        console.log(t1.trainee_details()); //10 John
+    </script>
+    
+</body>
+</html>

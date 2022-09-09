@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+</head>
+<body>
+    <script>
+        //function 
+        function Trainee_details(tid,tname) //10 John
+        {
+            var id=tid; //10
+            var name=tname; //John
+            //Encapsulation
+            Object.defineProperty
+            (
+                this,"ID",
+                {
+                    get:function()
+                    {
+                        return id;
+                    },
+                    set:function()
+                    {
+                        this.id=id;
+                    }
+                }
+            );
+            Object.defineProperty
+            (
+                this,"NAME",
+                {
+                    get:function()
+                    {
+                        return name;
+                    },
+                    set:function()
+                    {
+                        this.name=name;
+                    }
+                }
+            );
+        }
+        var t=new Trainee_details(10,"John");
+        console.log(t.ID);
+        console.log(t.NAME);
+    </script>
+    <script>
+        //class - Encapsulation
+        class Employee
+        {
+            constructor()
+            {
+                var empid;
+                var empname;
+            }
+            //Property for empid
+            //read
+            // getID()
+            // {
+            //     return this.empid;
+            // }
+            //write
+            setID(id)
+            {
+                this.empid=id;
+            }
+        }
+        var e=new Employee();
+        e.setID(10);
+        //console.log(e.getID());
+    </script>
+    <script>
+        class address{
+            //variables
+            // street_no; 
+            // city; //public
+           //_pincode; //private
+
+            constructor(no,city,pincode)
+            {
+                this.street_no=no; //3
+                this.city=city; //Bangalore
+                let _pincode=pincode; // 546372 avoid accessing the variable by creating it as a local variable
+                //access the above local variable with the below get func
+                this.get=()=>{
+                    return _pincode; //546372
+                }
+            }                   
+        }
+        var addr=new address(3,"Bangalore",546372);
+        console.log(addr.street_no);
+        console.log(addr.city);
+        console.log(addr._pincode); //undefined 
+        console.log(addr.get()); //546372
+    </script>
+    
+</body>
+</html>

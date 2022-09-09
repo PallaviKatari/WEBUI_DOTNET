@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <script>
+    class User {
+        #password;
+        constructor(name, userName, password) {
+          this.name = name;
+          this.userName = userName;
+          this.#password = password;
+        }
+      
+        login(userName, password) {
+          if (userName === this.userName && password === this.#password) {
+            console.log('Login Successfully');
+          } else {
+            console.log('Authentication Failed!!');
+          }
+        }
+      
+        setPassword(newPassword) {
+          this.#password = newPassword;
+        }
+      };
+      
+      const u = new User('John', 'john_j', 'password:)');
+      const js = new User('Peter', 'peter_p', 'python:)');
+      
+      
+      u.login('john_j', 'password:)'); // Login Successfully
+      js.login('peter_p', 'python:)'); // Login Successfully
+      
+      console.log(u.name); // John
+      console.log(u.password); // undefined
+      //console.log(u.#password); // Syntax Error
+      
+      u.setPassword('new_password:)');
+      u.login('john_j', 'password:)'); // Authentication Failed!!
+      u.login('john_j', 'new_password:)'); // Login Successfully
+    </script>
+</body>
+</html>

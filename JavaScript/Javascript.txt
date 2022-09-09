@@ -15,3 +15,5 @@ Javascript
 ->Control Statements -> Conditional and Looping
 ->Conditional/Decision making -> if,if-else,else if,nested if,switch-case
 ->Looping -> for,while,do while
+->String Functions
+->Array Functions
