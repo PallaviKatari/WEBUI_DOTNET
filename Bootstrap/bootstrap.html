@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap NavBar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <style>
+    img {
+      height: 300px;
+    }
+
+    h5,
+    p {
+      color: black;
+      text-align: justify;
+
+    }
+
+    .card {
+      /*margin-left: 40px;*/
+      height: 200px;
+      border: none;
+    }
+
+    .card_img {
+      border-radius: 20px;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      border: 2px solid;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!--NAVBAR-->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ABC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--BREADCRUMB-->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Courses</a></li>
+      <li class="breadcrumb-item " aria-current="page">Dotnet</li>
+    </ol>
+  </nav>
+  <!--IMAGE CAROUSEL-->
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="/HTML_CSS/assets/img2.jpg" class="d-block w-100" alt="CSS">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>CSS</h5>
+          <p>CASCADING STYLE SHEET</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="/HTML_CSS/assets/img3.jpg" class="d-block w-100" alt="JS">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>JS</h5>
+          <p>JAVASCRIPT</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/HTML_CSS/assets/img4.jpg" class="d-block w-100" alt="JQ">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>JQ</h5>
+          <p>jQuery</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <br>
+  <br>
+  <!--ALERT-->
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+    <strong>Free Courses for this weekend!!!</strong> Only for 1st 50 Registrations!!!!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <!--CONTAINER/CONTAINER-FLUID-->
+  <!--CARDS-->
+  <div class="container">
+    <div class="row">
+      <div class="col col-3 col-sm-6 col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card_img" src="/HTML_CSS/assets/img1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <button type="button" class="btn btn-info">
+              Trainings <span class="badge bg-success">10</span>
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col col-3 col-sm-6 col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card_img" src="/HTML_CSS/assets/img2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <button type="button" class="btn btn-info">
+              Trainings <span class="badge bg-success">2</span>
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col col-3 col-sm-6 col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card_img" src="/HTML_CSS/assets/img3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <button type="button" class="btn btn-info">
+              Trainings <span class="badge bg-success">4</span>
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col col-3 col-sm-6 col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card_img" src="/HTML_CSS/assets/img4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <button type="button" class="btn btn-info">
+              Trainings <span class="badge bg-success">7</span>
+            </button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--MODAL POPUP-->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">User Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--CONTEXTUAL CLASSES - PRIMARY,SECONDARY,INFO,WARNING,DANGER,LIGHT,DARK-->
+  <!--responsive table-->
+  <div class="container-fluid">
+    <h2 style="text-align:center">TRAINING DETAILS</h2>
+    <table class="table table-hover table-striped table-bordered" style="width:100%;">
+      <thead>
+        <tr>
+          <th>Training Code</th>
+          <th>Training Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>T001</td>
+          <td>Software Engineering</td>
+        </tr>
+        <tr>
+          <td>T002</td>
+          <td>OOPS</td>
+        </tr>
+        <tr>
+          <td>T003</td>
+          <td>Database</td>
+        </tr>
+        <tr>
+          <td>T004</td>
+          <td>WEB UI</td>
+        </tr>
+        <tr>
+          <td>T005</td>
+          <td>Angular</td>
+        </tr>
+        <tr>
+          <td>T006</td>
+          <td>.NET</td>
+        </tr>
+        <tr>
+          <td>T007</td>
+          <td>MS SQL Server</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--Nav Tab-->
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#html" type="button" role="tab"
+        aria-controls="home" aria-selected="true">HTML</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#css" type="button" role="tab"
+        aria-controls="profile" aria-selected="false">CSS</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#js" type="button" role="tab"
+        aria-controls="contact" aria-selected="false">JS</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="html" role="tabpanel" aria-labelledby="home-tab">
+      <h3>HTML</h3>
+      <p>A markup language is a programming language that is used make text more
+        interactive and dynamic. It can turn a text into images, tables, links etc.</p>
+    </div>
+    <div class="tab-pane fade" id="css" role="tabpanel" aria-labelledby="profile-tab">
+      <h3>CSS</h3>
+      <p>CSS is the language we use to style an HTML document.
+        CSS describes how HTML elements should be displayed.</p>
+    </div>
+    <div class="tab-pane fade" id="js" role="tabpanel" aria-labelledby="contact-tab">
+      <h3>JS</h3>
+      <p>JavaScript is the world's most popular programming language.
+        JavaScript is the programming language of the Web. 
+        JavaScript is easy to learn.</p>
+    </div>
+  </div>
+  <!--Nav Footer-->
+  <!-- <nav class="navbar fixed-bottom navbar-light bg-light">
+    <div class="container-fluid" style="text-align:center">
+      <a class="navbar-brand" href="#">&copy;www.abc.org</a>
+    </div>
+  </nav> -->
+</body>
+
+</html>

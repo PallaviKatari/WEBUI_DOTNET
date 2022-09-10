@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FORM VALIDATION</title>
     <style>
         span {
             color: red;
@@ -34,7 +34,7 @@
                 //alert('Please enter your name');
             }
             else if (!letters.test(name)) {
-                document.getElementById("name").innerHTML = "Name field required only alphabet characters";
+                document.getElementById("name").innerHTML = "Name field requires only alphabet characters";
                 //alert('Name field required only alphabet characters');
             }
             else if (email == '') {
@@ -127,11 +127,11 @@
             <table cellspacing="2" align="center" cellpadding="8" border="0">
                 <tr>
                     <td align="right">Enter Name :</td>
-                    <td><input type="text" placeholder="Enter user here" id="t1" required /><span id="name"></span></td>
+                    <td><input type="text" placeholder="Enter user here" id="t1"/><span id="name"></span></td>
                 </tr>
                 <tr>
                     <td align="right">Enter Email ID :</td>
-                    <td><input type="text" placeholder="Enter Email ID here" id="t2" /><span id="email"></span></td>
+                    <td><input type="email" placeholder="Enter Email ID here" id="t2" /><span id="email"></span></td>
                 </tr>
                 <tr>
                     <td align="right">Enter Username :</td>

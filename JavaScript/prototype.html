@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS PROTOTYPE</title>
+</head>
+<body>
+    <script>
+        //function without a proptotype
+        function course_details()
+        {
+            //2 properties
+            courseid=100;
+            coursename="DOTNET";
+        }
+        var c=new course_details();
+        c.courseduration="120hrs"; //3rd property
+        document.write(c.courseduration+"<br>");
+        var c1=new course_details();
+        document.write(c1.courseduration+"<br>"); //cannot access the courseduration
+    </script>
+    <script>
+        //function with prototype
+        function course_details()
+        {
+            //2 properties
+            courseid=200;
+            coursename="JAVA";
+        }
+        //3rd property created using prototype object
+        course_details.prototype.courseduration="150hrs";
+        //instance for course_details
+        var c=new course_details();
+        document.write("<hr>"+c.courseduration+"<br>");
+        var c1=new course_details();
+        document.write(c1.courseduration+"<br>");
+        //create a function using prototype
+        course_details.prototype.display=function()
+        {
+            return courseid + " " + coursename;
+        }
+        var c2=new course_details();
+        document.write("<hr>"+c2.courseduration+"<br>");
+        document.write(c2.display());
+    </script>
+    <!--ARROW FUNCTIONS-->
+    <script>
+        //normal function
+        function Display()
+        {
+            document.write("<br>"+"<hr>"+"Welcome to Normal Function");
+        }
+        //arrow function
+        let disp=()=>document.write("<br>"+"Welcome to Arrow Function");
+        let square=x=>document.write("<br>"+"Square is : " + (x*x));
+        let add=(x,y)=>document.write("<br>"+"Sum is : " + (x+y));
+        //invoke the functions
+        Display();
+        disp();
+        square(2);
+        add(10,20);
+    </script>
+    
+</body>
+</html>
